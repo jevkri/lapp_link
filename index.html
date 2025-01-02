@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script>
+        // Redirect based on the device type
+        document.addEventListener("DOMContentLoaded", () => {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const iosAppUrl = "https://apps.apple.com/us/app/l%C3%A4pp/id6738619512"; // Replace with your App Store URL
+            const androidAppUrl = "https://play.google.com/store/apps/details?id=com.judhin.myapp"; // Replace with your Play Store URL
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = androidAppUrl;
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = iosAppUrl;
+            } else {
+                document.body.innerHTML = `<p>Unsupported device or platform.</p>`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
