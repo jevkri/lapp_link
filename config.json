@@ -1,0 +1,23 @@
+{
+  "modem_config": {
+    "model": "Generic DVB-T2 Modem",
+    "firmware_version": "1.2.3",
+    "serial_number": "ABC123XYZ789",
+    "frequency_band": "T2-61",
+    "modulation_scheme": "QAM64",
+    "symbol_rate_kbps": 256000,
+    "receive": {
+      "signal_strength_dbm": 15,
+      "signal_quality_percent": 95,
+      "noise_figure_db": 5,
+      "carrier_deviation_ppm": 2,
+      "data_rate_kbps": 256000,
+    },
+    "transmit": {
+      "modulation_type": "QAM64",
+      "data_rate_kbps": 256000,
+      "power_level_dbm": 20,
+      "tx_status": "enabled",
+    }
+  }
+}
